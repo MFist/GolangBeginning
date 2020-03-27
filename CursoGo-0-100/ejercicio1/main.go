@@ -34,5 +34,5 @@ func main() {
 	`
 	fmt.Println(header)
 
-	fmt.Printf("Between the numbers \"%d\" and \"%d\", there are %d odd numbers", firstNumber, secondNumber, countOddNums)
+	fmt.Printf("Between the numbers \"%d\" and \"%d\", there are %d odd numbers.", firstNumber, secondNumber, countOddNums)
 }

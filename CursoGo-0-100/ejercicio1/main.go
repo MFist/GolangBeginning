@@ -10,14 +10,12 @@ func main() {
 	`
 	fmt.Println(header)
 
-	fmt.Println("Type the first number:")
-
 	var firstNumber int
-
+	fmt.Println("Type the first number:")
 	fmt.Scanln(&firstNumber)
-	fmt.Println("Type the second number:")
 
 	var secondNumber int
+	fmt.Println("Type the second number:")
 	fmt.Scanln(&secondNumber)
 
 	var countOddNums int
@@ -37,5 +35,4 @@ func main() {
 	fmt.Println(header)
 
 	fmt.Printf("Between the numbers \"%d\" and \"%d\", there are %d odd numbers", firstNumber, secondNumber, countOddNums)
-
 }

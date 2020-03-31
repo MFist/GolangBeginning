@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var rect = geometry.Rect{Width: 3, Height: 4}
+var rect = geometry.Rect{Width: 0, Height: 0}
 var circle = geometry.Circle{Radius: 0}
 
 var err error

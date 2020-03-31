@@ -7,17 +7,25 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Repository
+var obj = []model.Game{
+	model.Game{Name: "Detroit Become Human", Genre: "Action-adventure", Console: "Playstation 4", Year: 2018}, model.Game{Name: "Horizon Zero Dawn", Genre: "Action role-playing game", Console: "Playstation 4", Year: 2017},
+	model.Game{Name: "GTA V", Genre: "Action-adventure", Console: "Multiplataform", Year: 2013},
+}
+
+// Business
+
+func randomGame() model.Game {
+	game := model.Game{}
+	_ = faker.FakeData(&game)
+	return game
+}
+
 func main() {
 	r := gin.Default()
-	game := model.Game{}
-	err := faker.FakeData(&game)
+	game := randomGame()
 
 	r.GET("/game", func(c *gin.Context) {
-		if err != nil {
-			c.JSON(500, gin.H{
-				"Message": "Bad request",
-			})
-		}
 		c.JSON(200, gin.H{
 			"Game": game,
 		})
